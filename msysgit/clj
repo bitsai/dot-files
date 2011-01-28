@@ -5,6 +5,5 @@ VERSION=1.2
 
 CLOJURE=$DIR/clojure-$VERSION.jar
 CONTRIB=$DIR/clojure-contrib-$VERSION.jar
-SQL_SERVER=$DIR/sqljdbc4.jar
 
-java -server -cp ".;$CLOJURE;$CONTRIB;$SQL_SERVER" clojure.main "$@"
+java -server -cp ".;$CLOJURE;$CONTRIB" clojure.main "$@"
