@@ -9,7 +9,7 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(column-number-mode t)
- '(delete-selection-mode t)
+ '(cua-mode t nil (cua-base))
  '(global-visual-line-mode t)
  '(inferior-lisp-program "clj")
  '(inhibit-startup-screen t)
