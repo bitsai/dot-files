@@ -20,10 +20,6 @@
 (load "~/lib/emacs/clojure-mode/clojure-mode")
 (require 'clojure-mode)
 
-(load "~/lib/emacs/haskell-mode/haskell-site-file")
-(add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
-(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
-
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
