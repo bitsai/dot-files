@@ -2,7 +2,6 @@
 
 DIR=C:/Progra~1/clojure
 VERSION=1.2
-
 CLOJURE=$DIR/clojure-$VERSION.jar
 CONTRIB=$DIR/clojure-contrib-$VERSION.jar
 
