@@ -4,4 +4,4 @@ DIR=C:/kawa
 VERSION=1.11
 KAWA=$DIR/kawa-$VERSION.jar
 
-java -server -cp ".;$KAWA" kawa.repl -s "$@"
+java -server -cp ".;$KAWA" kawa.repl "$@"
