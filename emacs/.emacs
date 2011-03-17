@@ -13,7 +13,6 @@
  '(global-visual-line-mode t)
  '(inferior-lisp-program "clj")
  '(inhibit-startup-screen t)
- '(scheme-program-name "kawa")
  '(show-paren-mode t)
  '(show-paren-style (quote expression))
  '(tool-bar-mode nil))
@@ -37,3 +36,6 @@
     (load
      (expand-file-name "~/.emacs.d/elpa/package.el"))
   (package-initialize))
+
+(put 'upcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
