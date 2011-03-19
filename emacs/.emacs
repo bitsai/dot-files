@@ -13,6 +13,7 @@
  '(global-visual-line-mode t)
  '(inferior-lisp-program "clj")
  '(inhibit-startup-screen t)
+ '(scheme-program-name "kawa")
  '(show-paren-mode t)
  '(show-paren-style (quote expression))
  '(tool-bar-mode nil))
