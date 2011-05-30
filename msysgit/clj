@@ -1,8 +1,6 @@
 #!/bin/sh
 
-DIR=C:/Progra~1/clojure
-VERSION=1.2
-CLOJURE=$DIR/clojure-$VERSION.jar
-CONTRIB=$DIR/clojure-contrib-$VERSION.jar
+CLOJURE=C:/Progra~1/clojure/clojure-$CLOJURE_VERSION.jar
+CONTRIB=C:/Progra~1/clojure/clojure-contrib-$CLOJURE_VERSION.jar
 
 java -server -cp ".;$CLOJURE;$CONTRIB" clojure.main "$@"
