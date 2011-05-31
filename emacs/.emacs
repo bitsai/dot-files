@@ -20,4 +20,6 @@
 
 (load "~/.emacs.d/clojure-mode/clojure-mode")
 (require 'clojure-mode)
+
+(load "~/.emacs.d/quack")
 (require 'quack)
