@@ -1,0 +1,3 @@
+#!/bin/sh
+
+C:/Progra~1/emacs-$EMACS_VERSION/bin/runemacs.exe $@
