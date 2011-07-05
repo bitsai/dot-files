@@ -1,6 +1,5 @@
 @echo off
 
 SET CLOJURE=C:\Progra~1\clojure\clojure-%CLOJURE_VERSION%.jar
-SET CONTRIB=C:\Progra~1\clojure\clojure-contrib-%CLOJURE_VERSION%.jar
 
-java -server -cp .;%CLOJURE%;%CONTRIB% clojure.main %*
+java -server -cp .;%CLOJURE% clojure.main %*
