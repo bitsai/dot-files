@@ -1,5 +1,0 @@
-#!/bin/sh
-
-KAWA=C:/kawa/kawa-$KAWA_VERSION.jar
-
-java -server -cp ".;$KAWA" kawa.repl $@
