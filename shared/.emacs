@@ -1,4 +1,4 @@
-(server-start)
+;; (server-start)
 
 (setq make-backup-files nil)
 (setq auto-save-default nil)
@@ -13,18 +13,12 @@
  '(global-visual-line-mode t)
  '(inferior-lisp-program "clj")
  '(inhibit-startup-screen t)
- '(quack-default-program "kawa -s")
- '(quack-programs (quote ("kawa -s" "bigloo" "csi" "csi -hygienic" "gosh" "gracket" "gsi" "gsi ~~/syntax-case.scm -" "guile" "kawa" "mit-scheme" "racket" "racket -il typed/racket" "rs" "scheme" "scheme48" "scsh" "sisc" "stklos" "sxi")))
- '(quack-run-scheme-always-prompts-p nil)
  '(show-paren-mode t)
  '(show-paren-style (quote expression))
  '(tool-bar-mode nil))
 
 (load "~/.emacs.d/clojure-mode/clojure-mode")
 (require 'clojure-mode)
-
-(load "~/.emacs.d/quack/quack")
-(require 'quack)
 
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
