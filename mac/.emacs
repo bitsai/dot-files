@@ -1,5 +1,3 @@
-;; (server-start)
-
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 
@@ -11,7 +9,7 @@
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
  '(global-visual-line-mode t)
- '(inferior-lisp-program "clj")
+ '(inferior-lisp-program "java -server -cp .:/Users/bitsai/clojure/* clojure.main")
  '(inhibit-startup-screen t)
  '(show-paren-mode t)
  '(show-paren-style (quote expression))
