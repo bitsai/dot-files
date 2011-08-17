@@ -9,7 +9,7 @@
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
  '(global-visual-line-mode t)
- '(inferior-lisp-program "java -server -cp .:/Users/bitsai/clojure/* clojure.main")
+ '(inferior-lisp-program "lein repl")
  '(inhibit-startup-screen t)
  '(show-paren-mode t)
  '(show-paren-style (quote expression))
