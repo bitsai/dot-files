@@ -11,12 +11,17 @@
  '(global-visual-line-mode t)
  '(inferior-lisp-program "lein repl")
  '(inhibit-startup-screen t)
+ '(quack-default-program "racket")
+ '(quack-run-scheme-always-prompts-p nil)
  '(show-paren-mode t)
  '(show-paren-style (quote expression))
  '(tool-bar-mode nil))
 
 (load "~/.emacs.d/clojure-mode/clojure-mode")
 (require 'clojure-mode)
+
+(load "~/.emacs.d/quack/quack")
+(require 'quack)
 
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
