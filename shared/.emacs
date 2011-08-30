@@ -20,6 +20,11 @@
 (load "~/.emacs.d/clojure-mode/clojure-mode")
 (require 'clojure-mode)
 
+(load "~/.emacs.d/coffee-mode/coffee-mode")
+(require 'coffee-mode)
+(add-hook 'coffee-mode-hook
+	  '(lambda() (set (make-local-variable 'tab-width) 2)))
+
 (load "~/.emacs.d/quack/quack")
 (require 'quack)
 
