@@ -9,10 +9,8 @@
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
  '(global-visual-line-mode t)
- '(inferior-lisp-program "lein repl")
+ '(inferior-lisp-program "~/bin/lein repl")
  '(inhibit-startup-screen t)
- '(quack-default-program "racket")
- '(quack-run-scheme-always-prompts-p nil)
  '(show-paren-mode t)
  '(show-paren-style (quote expression))
  '(tool-bar-mode nil))
@@ -24,9 +22,6 @@
 (require 'coffee-mode)
 (add-hook 'coffee-mode-hook
 	  '(lambda() (set (make-local-variable 'tab-width) 2)))
-
-(load "~/.emacs.d/quack/quack")
-(require 'quack)
 
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
