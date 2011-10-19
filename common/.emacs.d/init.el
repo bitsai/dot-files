@@ -1,12 +1,12 @@
-(delete-selection-mode 1)
-(global-hl-line-mode 1)
+(delete-selection-mode t)
+(global-hl-line-mode t)
 (setq inhibit-startup-screen t)
-(tool-bar-mode 0)
+(tool-bar-mode nil)
 
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 
-(show-paren-mode 1)
+(show-paren-mode t)
 (setq show-paren-style 'expression)
 
 (load "~/.emacs.d/clojure-mode/clojure-mode")
