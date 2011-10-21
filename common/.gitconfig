@@ -3,3 +3,5 @@
 	email = benny.tsai@gmail.com
 [color]
 	diff = true
+[core]
+	autocrlf = input
