@@ -1,3 +1,4 @@
+(column-number-mode t)
 (delete-selection-mode t)
 (global-hl-line-mode t)
 (setq inhibit-startup-screen t)
