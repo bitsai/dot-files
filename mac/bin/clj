@@ -1,1 +1,3 @@
+#!/bin/sh
+
 java -server -cp '.:/Users/bitsai/clojure/*' clojure.main $@
