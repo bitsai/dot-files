@@ -1,8 +1,7 @@
 (column-number-mode t)
-(delete-selection-mode t)
 (global-hl-line-mode t)
 (setq inhibit-startup-screen t)
-(tool-bar-mode nil)
+(tool-bar-mode 0)
 
 (setq auto-save-default nil)
 (setq make-backup-files nil)
@@ -13,11 +12,6 @@
 (load "~/.emacs.d/clojure-mode/clojure-mode")
 (require 'clojure-mode)
 (setq inferior-lisp-program "~/bin/lein repl")
-
-(load "~/.emacs.d/coffee-mode/coffee-mode")
-(require 'coffee-mode)
-(add-hook 'coffee-mode-hook
-	  '(lambda () (set (make-local-variable 'tab-width) 2)))
 
 (add-to-list 'load-path "~/.emacs.d/paredit")
 (autoload 'enable-paredit-mode "paredit" t)
