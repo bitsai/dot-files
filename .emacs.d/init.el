@@ -1,6 +1,7 @@
 (column-number-mode t)
 (global-hl-line-mode t)
 (setq inhibit-startup-screen t)
+(tool-bar-mode 0)
 
 (setq auto-save-default nil)
 (setq make-backup-files nil)
