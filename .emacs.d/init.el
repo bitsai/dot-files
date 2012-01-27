@@ -1,6 +1,7 @@
 (column-number-mode t)
 (global-hl-line-mode t)
 (setq inhibit-startup-screen t)
+(setq read-file-name-completion-ignore-case t)
 (tool-bar-mode 0)
 
 (setq auto-save-default nil)
