@@ -2,6 +2,6 @@
 	name = Benny Tsai
 	email = benny.tsai@gmail.com
 [color]
-	diff = true
+	ui = true
 [core]
 	autocrlf = input
