@@ -1,7 +1,9 @@
-[user]
-	name = Benny Tsai
-	email = benny.tsai@gmail.com
 [color]
 	ui = true
 [core]
 	autocrlf = input
+[push]
+	default = current
+[user]
+	email = benny.tsai@gmail.com
+	name = Benny Tsai
