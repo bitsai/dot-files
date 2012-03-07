@@ -9,11 +9,6 @@
 (show-paren-mode t)
 (setq show-paren-style 'expression)
 
-(speedbar 1)
-(setq speedbar-directory-unshown-regexp "^$")
-(speedbar-toggle-show-all-files)
-(speedbar-toggle-updates)
-
 (add-to-list 'load-path "~/.emacs.d/clojure-mode")
 (require 'clojure-mode)
 (setq inferior-lisp-program "/usr/local/bin/lein repl")
