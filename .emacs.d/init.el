@@ -1,6 +1,7 @@
 (column-number-mode t)
 (setq inhibit-startup-screen t)
 (setq read-file-name-completion-ignore-case t)
+(setq-default indent-tabs-mode nil)
 (tool-bar-mode 0)
 
 (setq auto-save-default nil)
