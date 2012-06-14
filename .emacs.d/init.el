@@ -1,8 +1,13 @@
+(require 'package)
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
+
+(add-hook 'clojure-mode-hook (lambda () (paredit-mode t)))
 (column-number-mode t)
-(setq inferior-lisp-buffer "*inferior-lisp*")
+(load-theme 'wombat t)
 (setq inhibit-startup-screen t)
 (setq read-file-name-completion-ignore-case t)
-(setq-default indent-tabs-mode nil)
 (tool-bar-mode 0)
 
 (setq auto-save-default nil)
@@ -11,25 +16,5 @@
 (show-paren-mode t)
 (setq show-paren-style 'expression)
 
-(add-to-list 'load-path "~/.emacs.d/clojure-mode")
-(require 'clojure-mode)
-(setq inferior-lisp-program "/usr/local/bin/lein repl")
-
-(add-to-list 'load-path "~/.emacs.d/color-theme")
-(require 'color-theme)
-(color-theme-charcoal-black)
-
-(add-to-list 'load-path "~/.emacs.d/paredit")
-(require 'paredit)
-(defun turn-on-paredit ()
-  (define-key paredit-mode-map "{" 'paredit-open-curly)
-  (define-key paredit-mode-map "}" 'paredit-close-curly)
-  (modify-syntax-entry ?\{ "(}")
-  (modify-syntax-entry ?\} "){")
-  (modify-syntax-entry ?\[ "(]")
-  (modify-syntax-entry ?\] ")[")
-  (paredit-mode 1))
-(add-hook 'clojure-mode-hook 'turn-on-paredit)
-(add-hook 'emacs-lisp-mode-hook 'turn-on-paredit)
-(add-hook 'inferior-lisp-mode-hook 'turn-on-paredit)
-(add-hook 'lisp-interaction-mode-hook 'turn-on-paredit)
+(setq js-indent-level 2)
+(setq-default indent-tabs-mode nil)
