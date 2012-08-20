@@ -28,7 +28,7 @@
 (global-set-key "\C-x\C-k" 'kill-region)
 (global-set-key "\C-x\C-m" 'execute-extended-command)
 
-;; miscellaenous
+;; miscellaneous
 (column-number-mode t)
 (setq inhibit-startup-screen t)
 (setq read-file-name-completion-ignore-case t)
