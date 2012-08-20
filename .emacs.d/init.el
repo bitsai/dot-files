@@ -1,20 +1,35 @@
+;; package manager
 (require 'package)
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
-(add-hook 'clojure-mode-hook (lambda () (paredit-mode t)))
-(column-number-mode t)
+;; UI
 (load-theme 'wombat t)
-(setq inhibit-startup-screen t)
-(setq read-file-name-completion-ignore-case t)
+(menu-bar-mode 0)
+(scroll-bar-mode 0)
 (tool-bar-mode 0)
 
+;; indentation
+(setq js-indent-level 2)
+(setq-default indent-tabs-mode nil)
+
+;; no backups
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 
-(show-paren-mode t)
-(setq show-paren-style 'expression)
+;; paredit
+(add-hook 'clojure-mode-hook (lambda () (paredit-mode t)))
+(add-hook 'emacs-lisp-mode-hook (lambda () (paredit-mode t)))
+(add-hook 'lisp-interaction-mode-hook (lambda () (paredit-mode t)))
 
-(setq js-indent-level 2)
-(setq-default indent-tabs-mode nil)
+;; rebind keys
+(global-set-key "\C-w" 'backward-kill-word)
+(global-set-key "\C-x\C-k" 'kill-region)
+(global-set-key "\C-x\C-m" 'execute-extended-command)
+
+;; miscellaenous
+(column-number-mode t)
+(setq inhibit-startup-screen t)
+(setq read-file-name-completion-ignore-case t)
+(show-paren-mode t)
