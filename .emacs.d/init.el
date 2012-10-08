@@ -27,9 +27,11 @@
 (global-set-key "\C-w" 'backward-kill-word)
 (global-set-key "\C-x\C-k" 'kill-region)
 (global-set-key "\C-x\C-m" 'execute-extended-command)
+(global-set-key (kbd "C-x C-M-f") 'find-file-in-project)
 
 ;; miscellaneous
 (column-number-mode t)
+(ido-mode t)
 (setq inhibit-startup-screen t)
 (setq read-file-name-completion-ignore-case t)
 (show-paren-mode t)
