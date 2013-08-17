@@ -2,17 +2,17 @@
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
+(unless package-archive-contents
+  (package-refresh-contents))
 
-(defvar my-packages '(nrepl
-                      starter-kit
-                      starter-kit-eshell
-                      starter-kit-js
-                      starter-kit-lisp))
+(defvar my-packages '(better-defaults
+                      nrepl
+                      paredit))
 
 (dolist (p my-packages)
-  (when (not (package-installed-p p))
+  (unless (package-installed-p p)
     (package-install p)))
 
-(add-hook 'nrepl-mode-hook 'paredit-mode)
-
 (load-theme 'wombat t)
+
+(setq inhibit-startup-screen t)
