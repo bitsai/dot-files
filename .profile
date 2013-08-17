@@ -9,3 +9,6 @@ PS1="$NO_COLOUR\w$GREEN\$(parse_git_branch) $NO_COLOUR$ "
 CLICOLOR=1
 
 alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
+
+export GOPATH=$HOME/Projects/go
+export PATH=/usr/local/bin:$PATH:$GOPATH/bin
