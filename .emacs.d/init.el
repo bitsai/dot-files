@@ -1,11 +1,14 @@
 (require 'package)
 (add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/"))
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 (unless package-archive-contents
   (package-refresh-contents))
 
 (defvar my-packages '(better-defaults
+                      clojure-mode
+                      elixir-mode
+                      go-mode
                       nrepl
                       paredit))
 
@@ -13,6 +16,8 @@
   (unless (package-installed-p p)
     (package-install p)))
 
-(load-theme 'wombat t)
+(add-hook 'clojure-mode-hook 'paredit-mode)
+(add-hook 'nrepl-mode-hook 'paredit-mode)
 
+(load-theme 'wombat t)
 (setq inhibit-startup-screen t)
