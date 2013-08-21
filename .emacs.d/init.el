@@ -9,8 +9,6 @@
   (package-refresh-contents))
 
 (defvar my-packages '(better-defaults
-                      clojure-mode
-                      elixir-mode
                       erlang
                       go-mode
                       nrepl
