@@ -11,6 +11,7 @@
 (defvar my-packages '(better-defaults
                       clojure-mode
                       elixir-mode
+                      erlang
                       go-mode
                       nrepl
                       paredit
@@ -26,5 +27,6 @@
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 
+(column-number-mode t)
 (load-theme 'wombat t)
 (setq inhibit-startup-screen t)
