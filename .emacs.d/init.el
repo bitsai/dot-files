@@ -28,3 +28,4 @@
 (column-number-mode t)
 (load-theme 'wombat t)
 (setq inhibit-startup-screen t)
+(setq nrepl-hide-special-buffers t)
