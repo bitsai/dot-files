@@ -9,8 +9,6 @@
   (package-refresh-contents))
 
 (defvar my-packages '(better-defaults
-                      erlang
-                      go-mode
                       nrepl
                       paredit
                       smex))
