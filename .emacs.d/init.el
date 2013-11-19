@@ -9,7 +9,7 @@
   (package-refresh-contents))
 
 (defvar my-packages '(better-defaults
-                      nrepl
+                      cider
                       paredit
                       smex))
 
