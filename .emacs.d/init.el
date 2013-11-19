@@ -18,7 +18,7 @@
     (package-install p)))
 
 (add-hook 'cider-mode-hook 'paredit-mode)
-(add-hook 'clojure-mode-hook 'paredit-mode)
+(add-hook 'cider-repl-mode-hook 'paredit-mode)
 
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
