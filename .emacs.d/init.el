@@ -1,8 +1,7 @@
 (require 'package)
 
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/")
-             t)
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
 
 (package-initialize)
 
@@ -11,6 +10,7 @@
 
 (defvar my-packages '(better-defaults
                       cider
+                      ido-ubiquitous
                       paredit
                       smex))
 
@@ -19,14 +19,11 @@
     (package-install p)))
 
 (add-hook 'cider-repl-mode-hook 'paredit-mode)
-(add-hook 'cider-repl-mode-hook 'subword-mode)
 (add-hook 'clojure-mode-hook 'paredit-mode)
-(add-hook 'clojure-mode-hook 'subword-mode)
-
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
-
+(add-hook 'emacs-lisp-mode-hook 'paredit-mode)
 (column-number-mode t)
+(global-set-key (kbd "M-x") 'smex)
 (load-theme 'wombat t)
+(setq ido-ubiquitous-mode t)
 (setq inhibit-startup-screen t)
 (setq nrepl-hide-special-buffers t)
