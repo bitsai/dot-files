@@ -25,6 +25,11 @@
 (add-hook 'clojure-mode-hook 'paredit-mode)
 (add-hook 'emacs-lisp-mode-hook 'paredit-mode)
 
+;; OSX emacs path and exec-path hacks for lein
+(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
+(setq exec-path (append exec-path '("/usr/local/bin")))
+
+;; misc.
 (column-number-mode t)
 (global-set-key (kbd "M-x") 'smex)
 (load-theme 'wombat t)
