@@ -10,6 +10,8 @@
 
 (defvar my-packages '(better-defaults
                       cider
+                      company
+                      ido-ubiquitous
                       paredit
                       smex))
 
@@ -17,8 +19,9 @@
   (unless (package-installed-p p)
     (package-install p)))
 
+(add-hook 'cider-repl-mode-hook 'company-mode)
 (add-hook 'cider-repl-mode-hook 'paredit-mode)
-(add-hook 'clojure-mode-hook 'cider-turn-on-eldoc-mode)
+(add-hook 'clojure-mode-hook 'company-mode)
 (add-hook 'clojure-mode-hook 'paredit-mode)
 (add-hook 'emacs-lisp-mode-hook 'paredit-mode)
 
