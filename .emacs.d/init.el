@@ -19,13 +19,15 @@
   (unless (package-installed-p p)
     (package-install p)))
 
-(add-hook 'cider-repl-mode-hook 'company-mode)
+;; use company-mode for auto-completion in all buffers
+(add-hook 'after-init-hook 'global-company-mode)
+
+;; use paredit for all things LISPy
 (add-hook 'cider-repl-mode-hook 'paredit-mode)
-(add-hook 'clojure-mode-hook 'company-mode)
 (add-hook 'clojure-mode-hook 'paredit-mode)
 (add-hook 'emacs-lisp-mode-hook 'paredit-mode)
 
-;; OSX emacs path and exec-path hacks for lein
+;; hack OSX emacs path and exec-path for lein
 (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
 (setq exec-path (append exec-path '("/usr/local/bin")))
 
