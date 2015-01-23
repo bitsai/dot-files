@@ -36,5 +36,5 @@
 (global-set-key (kbd "<home>") 'beginning-of-line)
 (global-set-key (kbd "<end>") 'end-of-line)
 (global-set-key (kbd "M-x") 'smex)
-(load-theme 'tango-dark t)
+(load-theme 'deeper-blue t)
 (setq inhibit-startup-screen t)
