@@ -27,14 +27,14 @@
 (add-hook 'clojure-mode-hook 'paredit-mode)
 (add-hook 'emacs-lisp-mode-hook 'paredit-mode)
 
-;; hack OSX emacs path and exec-path for lein
+;; OSX hacks
+(global-set-key (kbd "<home>") 'beginning-of-line)
+(global-set-key (kbd "<end>") 'end-of-line)
 (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
 (setq exec-path (append exec-path '("/usr/local/bin")))
 
 ;; misc.
 (column-number-mode t)
-(global-set-key (kbd "<home>") 'beginning-of-line)
-(global-set-key (kbd "<end>") 'end-of-line)
 (global-set-key (kbd "M-x") 'smex)
 (load-theme 'deeper-blue t)
 (setq inhibit-startup-screen t)
