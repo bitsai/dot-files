@@ -37,4 +37,5 @@
 (column-number-mode t)
 (global-set-key (kbd "M-x") 'smex)
 (load-theme 'deeper-blue t)
+(server-start)
 (setq inhibit-startup-screen t)
