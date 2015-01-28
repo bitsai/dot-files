@@ -7,7 +7,7 @@
 	ui = true
 [core]
 	autocrlf = input
-	editor = emacs
+	editor = emacsclient
 [push]
 	default = current
 [user]
