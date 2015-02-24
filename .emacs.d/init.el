@@ -45,6 +45,5 @@
 ;; misc.
 (column-number-mode t)
 (ido-ubiquitous-mode t)
-(load-theme 'manoj-dark t)
 (server-start)
 (setq inhibit-startup-screen t)
