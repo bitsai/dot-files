@@ -5,12 +5,11 @@
 
 (package-initialize)
 
-(unless package-archive-contents
-  (package-refresh-contents))
-
 (defvar my-packages '(better-defaults
                       cider
                       company
+                      find-file-in-project
+                      idle-highlight-mode
                       ido-ubiquitous
                       paredit
                       smex))
@@ -19,13 +18,23 @@
   (unless (package-installed-p p)
     (package-install p)))
 
-;; use company-mode for auto-completion in all buffers
-(add-hook 'after-init-hook 'global-company-mode)
+;; hooks
+(defun my-coding-hook ()
+  (idle-highlight-mode t))
 
-;; use paredit for all things LISPy
-(add-hook 'cider-repl-mode-hook 'paredit-mode)
-(add-hook 'clojure-mode-hook 'paredit-mode)
-(add-hook 'emacs-lisp-mode-hook 'paredit-mode)
+(defun my-lisp-hook ()
+  (my-coding-hook)
+  (paredit-mode t))
+
+(add-hook 'after-init-hook 'global-company-mode)
+(add-hook 'cider-repl-mode-hook 'my-lisp-hook)
+(add-hook 'clojure-mode-hook 'my-lisp-hook)
+(add-hook 'emacs-lisp-mode-hook 'my-lisp-hook)
+(add-hook 'python-mode-hook 'my-coding-hook)
+
+;; key bindings
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "C-x f") 'find-file-in-project)
 
 ;; OSX hacks
 (global-set-key (kbd "<home>") 'beginning-of-line)
@@ -35,7 +44,6 @@
 
 ;; misc.
 (column-number-mode t)
-(global-set-key (kbd "M-x") 'smex)
-(load-theme 'deeper-blue t)
+(ido-ubiquitous-mode t)
 (server-start)
 (setq inhibit-startup-screen t)
