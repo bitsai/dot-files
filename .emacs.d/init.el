@@ -45,5 +45,6 @@
 ;; misc.
 (column-number-mode t)
 (ido-ubiquitous-mode t)
+(load-theme 'wheatgrass t)
 (server-start)
 (setq inhibit-startup-screen t)
