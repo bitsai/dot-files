@@ -8,8 +8,6 @@
 (defvar my-packages '(better-defaults
                       cider
                       company
-                      find-file-in-project
-                      flycheck
                       idle-highlight-mode
                       ido-ubiquitous
                       paredit
@@ -29,18 +27,12 @@
   (my-coding-hook)
   (paredit-mode t))
 
-(defun my-python-hook ()
-  (my-coding-hook)
-  (flycheck-mode t))
-
 (add-hook 'cider-repl-mode-hook 'my-lisp-hook)
 (add-hook 'clojure-mode-hook 'my-lisp-hook)
 (add-hook 'emacs-lisp-mode-hook 'my-lisp-hook)
-(add-hook 'python-mode-hook 'my-python-hook)
 
 ;; key bindings
 (global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "C-x f") 'find-file-in-project)
 
 ;; OSX hacks
 (global-set-key (kbd "<home>") 'beginning-of-line)
@@ -53,7 +45,6 @@
 (ido-ubiquitous-mode t)
 (load-theme 'solarized-dark t)
 (server-start)
-(setq flycheck-flake8-maximum-line-length 1024)
 (setq inhibit-startup-screen t)
 (setq split-height-threshold nil)
 (setq split-width-threshold nil)
