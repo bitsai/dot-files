@@ -55,3 +55,5 @@
 (server-start)
 (setq flycheck-flake8-maximum-line-length 1024)
 (setq inhibit-startup-screen t)
+(setq split-height-threshold nil)
+(setq split-width-threshold nil)
