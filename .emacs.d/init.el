@@ -5,11 +5,14 @@
 
 (package-initialize)
 
+(when (not package-archive-contents)
+  (package-refresh-contents))
+
 (defvar my-packages '(better-defaults
                       cider
                       company
                       idle-highlight-mode
-                      ido-ubiquitous
+                      ido-hacks
                       paredit
                       smex
                       solarized-theme))
