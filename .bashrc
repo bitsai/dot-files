@@ -8,7 +8,6 @@ export CLICOLOR=1
 export PATH=/usr/local/bin:$PATH
 export PS1="\w\e[32m\$(parse_git_branch)\e[0m $ "
 
-# see https://github.com/bobthecow/git-flow-completion/wiki/Install-Bash-git-completion
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
+if [ -f $(brew --prefix)/etc/bash_completion.d/git-completion.bash ]; then
+    . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
 fi
