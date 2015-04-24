@@ -11,8 +11,6 @@
 (defvar my-packages '(better-defaults
                       cider
                       company
-                      idle-highlight-mode
-                      ido-hacks
                       paredit
                       smex
                       solarized-theme))
@@ -22,12 +20,8 @@
     (package-install p)))
 
 ;; hooks
-(defun my-coding-hook ()
-  (company-mode t)
-  (idle-highlight-mode t))
-
 (defun my-lisp-hook ()
-  (my-coding-hook)
+  (company-mode t)
   (paredit-mode t))
 
 (add-hook 'cider-repl-mode-hook 'my-lisp-hook)
@@ -42,6 +36,9 @@
 (global-set-key (kbd "<end>") 'end-of-line)
 (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
 (setq exec-path (append exec-path '("/usr/local/bin")))
+
+;; RFZ
+(setq js-indent-level 2)
 
 ;; misc.
 (column-number-mode t)
