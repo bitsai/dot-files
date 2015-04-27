@@ -24,9 +24,16 @@
   (company-mode t)
   (paredit-mode t))
 
-(add-hook 'cider-repl-mode-hook 'my-lisp-hook)
-(add-hook 'clojure-mode-hook 'my-lisp-hook)
+(add-hook 'emacs-lisp-mode-hook 'eldoc-mode)
 (add-hook 'emacs-lisp-mode-hook 'my-lisp-hook)
+
+(defun my-clojure-hook ()
+  (my-lisp-hook)
+  (subword-mode t))
+
+(add-hook 'cider-mode-hook 'eldoc-mode)
+(add-hook 'cider-repl-mode-hook 'my-clojure-hook)
+(add-hook 'clojure-mode-hook 'my-clojure-hook)
 
 ;; key bindings
 (global-set-key (kbd "M-x") 'smex)
