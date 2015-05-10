@@ -8,4 +8,4 @@ function parse_git_branch () {
 
 export CLICOLOR=1
 export PATH=/usr/local/bin:$PATH
-export PS1="\w\e[32m\$(parse_git_branch)\e[0m $ "
+export PS1="\W\e[32m\$(parse_git_branch)\e[0m $ "
