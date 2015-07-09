@@ -1,1 +1,1 @@
-{:user {:plugins [[cider/cider-nrepl "0.9.0-SNAPSHOT"]]}}
+{:user {:plugins [[cider/cider-nrepl "0.10.0-SNAPSHOT"]]}}
