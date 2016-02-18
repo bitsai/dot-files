@@ -20,16 +20,11 @@
     (package-install p)))
 
 ;; hooks
-(add-hook 'after-init-hook 'global-company-mode)
-
-(defun my-lisp-hook ()
-  (eldoc-mode t)
-  (paredit-mode t))
-
-(add-hook 'cider-mode-hook 'my-lisp-hook)
-(add-hook 'cider-repl-mode-hook 'my-lisp-hook)
-(add-hook 'clojure-mode-hook 'my-lisp-hook)
-(add-hook 'emacs-lisp-mode-hook 'my-lisp-hook)
+(add-hook 'after-init-hook #'global-company-mode)
+(add-hook 'cider-mode-hook #'eldoc-mode)
+(add-hook 'cider-repl-mode-hook #'paredit-mode)
+(add-hook 'clojure-mode-hook #'paredit-mode)
+(add-hook 'emacs-lisp-mode-hook #'paredit-mode)
 
 ;; key bindings
 (global-set-key (kbd "M-x") 'smex)
@@ -37,6 +32,9 @@
 ;; OSX hacks
 (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
 (setq exec-path (append exec-path '("/usr/local/bin")))
+
+;; CIDER: dispose of *nrepl-messages* buffers
+(setq nrepl-log-messages nil)
 
 ;; misc.
 (column-number-mode t)
