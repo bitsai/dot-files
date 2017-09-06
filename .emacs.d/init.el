@@ -35,9 +35,6 @@
 (setq exec-path (append exec-path '("/usr/local/bin")))
 (setq visible-bell nil)
 
-;; CIDER: dispose of *nrepl-messages* buffers
-(setq nrepl-log-messages nil)
-
 ;; misc.
 (column-number-mode t)
 (load-theme 'solarized-dark t)
