@@ -1,3 +1,9 @@
+- store SSH key in the keychain
+
+```
+ssh-add -K ~/.ssh/id_rsa
+
+```
 - use "Emacs for OSX" emacsclient
 
 ```
