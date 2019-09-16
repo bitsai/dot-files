@@ -25,7 +25,6 @@
 (add-hook 'cider-repl-mode-hook #'eldoc-mode)
 (add-hook 'cider-repl-mode-hook #'paredit-mode)
 (add-hook 'clojure-mode-hook #'paredit-mode)
-(add-hook 'emacs-lisp-mode-hook #'paredit-mode)
 
 ;; key bindings
 (global-set-key (kbd "M-x") 'smex)
@@ -40,3 +39,4 @@
 (load-theme 'solarized-dark t)
 (server-start)
 (setq inhibit-startup-screen t)
+(setq initial-scratch-message "")
