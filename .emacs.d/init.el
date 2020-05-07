@@ -26,6 +26,15 @@
 (add-hook 'cider-repl-mode-hook #'paredit-mode)
 (add-hook 'clojure-mode-hook #'paredit-mode)
 
+;; Clojure
+(setenv "ENV" "dev")
+
+;; JavaScript
+(setq js-indent-level 2)
+
+;; XML
+(setq nxml-child-indent 2 nxml-attribute-indent 2)
+
 ;; key bindings
 (global-set-key (kbd "M-x") 'smex)
 
